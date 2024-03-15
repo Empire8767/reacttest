@@ -1,0 +1,102 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Poppins:wght@200&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-image: url("E:\companyTask\task\public\cartoon-backgorund-3.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+html body {
+  font-family: "Lato", sans-serif;
+  font-weight: 100;
+  font-style: normal;
+}
+
+.title {
+  display: grid;
+  grid-template-columns: repeat(5, 0.4fr);
+  align-items: center;
+  column-gap: 13px;
+}
+.text-section {
+  height: 700px;
+  width: 600px;
+  background-color: aliceblue;
+  border-bottom-left-radius: 20%;
+  margin-top: -15px;
+  padding-left: 15px;
+}
+.container-fluid,
+.first {
+  letter-spacing: 2px;
+}
+.title::before,
+.title::after {
+  content: "";
+  height: 1px;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: block;
+}
+
+.btn {
+  color: #ff4e00;
+}
+
+/* Footer Section */
+ul {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+li {
+  margin: 6px;
+}
+i {
+  font-size: 2vw;
+  margin-left: -5px;
+}
+li:hover {
+  cursor: pointer;
+  transform: translateY(-15px);
+}
+
+/* For Tab Devices */
+
+@media (max-width: 991px) {
+  .container-fluid,
+  ul li i {
+    margin-right: 40px;
+    font-size: 1rem;
+  }
+}
+
+/* For Mobile Devices */
+
+@media (max-width: 768px) {
+  .container-fluid,
+  ul li i {
+    margin-left: 10px;
+    font-size: 2rem;
+  }
+
+  /* extra small devices */
+  @media (max-width: 575.98px) {
+    .container-fulid,
+    .title {
+      grid-template-columns: repeat(3, 0.4fr);
+      align-items: center;
+      column-gap: 13px;
+    }
+    .container-fluid,
+    ul li i {
+      margin-left: 60px;
+      font-size: 2rem;
+      gap: -2vw;
+    }
+  }
+}
